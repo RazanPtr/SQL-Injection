@@ -1,4 +1,4 @@
-![image](https://github.com/RazanPtr/XSS-SQL-Injection/assets/88721317/1edbe107-8cab-4310-8be3-891fee055ac4)# Basic XSS & SQL Injection in Python
+# Basic XSS & SQL Injection in Python
 
 A simple python project to test XSS & SQL Injection vulnerabilities on a website.
 
